@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dashboard Escola - Plataforma Educa{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-1">Dashboard da Escola</h1>
+    <h2 class="h4 text-muted mb-4">{{ school_profile.school_name }}</h2>
+    <p class="text-muted">Bem-vindo(a), {{ user.username }}!</p>
+    <hr class="border-secondary mb-4">
+
+    {# Exibir mensagens do Django #}
+    {% if messages %}
+        <div class="mb-4">
+            {% for message in messages %}
+                <div class="alert alert-{% if message.tags %}{{ message.tags }}{% else %}info{% endif %} alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <div class="row">
+        {# Card de Upload de Alunos #}
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    Registrar Alunos em Massa (via Excel)
+                </div>
+                <div class="card-body">
+                    <p class="card-text small text-muted">Faça o upload de um arquivo .xlsx para registrar múltiplos alunos de uma vez.</p>
+                    <form method="post" action="{% url 'upload_students_excel' %}" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            {{ upload_form.excel_file.label_tag }}
+                            {{ upload_form.excel_file }}
+                            <div class="form-text">{{ upload_form.excel_file.help_text }}</div>
+                            {% if upload_form.excel_file.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {% for error in upload_form.excel_file.errors %}
+                                        {{ error }}
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <button type="submit" class="btn btn-primary">Enviar Arquivo</button>
+                            <a href="/home/ubuntu/template_alunos.xlsx" download="template_alunos.xlsx" class="btn btn-outline-secondary btn-sm">Baixar Modelo</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        {# Card de Gerenciamento Escolar (Existente) #}
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    Gerenciamento Escolar
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="link-light">Gerenciar Professores</a> <span class="badge bg-secondary">Em breve</span></li>
+                        <li class="mb-2"><a href="#" class="link-light">Gerenciar Turmas/Grupos</a> <span class="badge bg-secondary">Em breve</span></li>
+                        <li class="mb-2"><a href="#" class="link-light">Visualizar Alunos Cadastrados</a> <span class="badge bg-secondary">Em breve</span></li> {# Atualizado #}
+                        <li><a href="#" class="link-light">Validar Cadastros Pendentes</a> <span class="badge bg-secondary">Em breve</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        {# Card de Relatórios (Existente) #}
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    Relatórios e Desempenho
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="link-light">Desempenho Geral da Escola</a> <span class="badge bg-secondary">Em breve</span></li>
+                        <li class="mb-2"><a href="#" class="link-light">Relatório de Progresso por Turma</a> <span class="badge bg-secondary">Em breve</span></li>
+                        <li class="mb-2"><a href="#" class="link-light">Relatório de Engajamento de Alunos</a> <span class="badge bg-secondary">Em breve</span></li>
+                        <li><a href="#" class="link-light">Exportar Dados para Validação</a> <span class="badge bg-secondary">Em breve</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+

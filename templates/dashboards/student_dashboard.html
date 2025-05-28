@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Meu Dashboard - Plataforma Educa{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-1">Meu Dashboard</h1>
+    <h2 class="h4 text-muted mb-4">Escola: {{ student_profile.school.school_name }}</h2>
+    <p class="text-muted">Bem-vindo(a), {{ user.username }}!</p>
+    <hr class="border-secondary mb-4">
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    Minhas Atividades
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="link-light">Ver Atividades Pendentes</a> <span class="badge bg-secondary">Em breve</span></li>
+                        <li class="mb-2"><a href="#" class="link-light">Ver Atividades Concluídas</a> <span class="badge bg-secondary">Em breve</span></li>
+                        <li><a href="#" class="link-light">Histórico de Correções e Notas</a> <span class="badge bg-secondary">Em breve</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header">
+                    Dicas e Notificações
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="link-light">Dicas Personalizadas de Estudo</a> <span class="badge bg-secondary">Em breve</span></li>
+                        <li><a href="#" class="link-light">Notificações Recentes</a> <span class="badge bg-secondary">Em breve</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    Meu Progresso e Conquistas
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="link-light">Visualizar Meu Progresso</a> <span class="badge bg-secondary">Em breve</span></li>
+                        <li><a href="#" class="link-light">Minhas Conquistas (Badges)</a> <span class="badge bg-secondary">Em breve</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Opcional: Feedback Emocional -->
+            <!--
+            <div class="card mb-4">
+                <div class="card-header">
+                    Como você está se sentindo?
+                </div>
+                <div class="card-body">
+                    <form method="post" action="#"> {# URL para registrar feedback #}
+                        {% csrf_token %}
+                        <button type="submit" name="emotion" value="HAPPY" class="btn btn-outline-success me-2">😊 Feliz</button>
+                        <button type="submit" name="emotion" value="FOCUSED" class="btn btn-outline-info me-2">🤔 Focado</button>
+                        <button type="submit" name="emotion" value="DISTRACTED" class="btn btn-outline-warning me-2">😵 Distraído</button>
+                        <button type="submit" name="emotion" value="SAD" class="btn btn-outline-secondary">😔 Triste</button>
+                    </form>
+                </div>
+            </div>
+            -->
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+

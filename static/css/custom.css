@@ -1,0 +1,130 @@
+/* static/css/custom.css */
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --primary-accent: #39FF14; /* Verde Neon */
+    --secondary-accent: #00FFFF; /* Azul Ciano */
+    --danger-accent: #FF0000; /* Vermelho */
+    --info-accent: #FFA500; /* Laranja */
+    --background-color: #000000;
+    --navbar-background: #111111;
+    --card-background: #1a1a1a;
+    --text-color: #E0E0E0;
+    --text-muted-color: #888888;
+    --border-color: #444444;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding-top: 5rem; /* Ajuste conforme altura da navbar */
+}
+
+.navbar {
+    background-color: var(--navbar-background);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-brand {
+    color: var(--primary-accent) !important;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: var(--text-color) !important;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-accent) !important;
+}
+
+.navbar-text {
+     color: var(--text-muted-color) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-accent);
+    border-color: var(--primary-accent);
+    color: var(--background-color);
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #2dbd0f; /* Verde um pouco mais escuro */
+    border-color: #2dbd0f;
+    color: var(--background-color);
+}
+
+.btn-outline-danger {
+    border-color: var(--danger-accent);
+    color: var(--danger-accent);
+}
+
+.btn-outline-danger:hover {
+    background-color: var(--danger-accent);
+    color: var(--background-color);
+}
+
+.card {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    margin-bottom: 1.5rem;
+}
+
+.card-header {
+    background-color: rgba(255, 255, 255, 0.05); /* Fundo levemente mais claro */
+    border-bottom: 1px solid var(--border-color);
+    color: var(--primary-accent);
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-accent); /* Títulos com cor de destaque */
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--secondary-accent);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary-accent);
+    text-decoration: underline;
+}
+
+.text-muted {
+    color: var(--text-muted-color) !important;
+}
+
+.border-top {
+    border-top: 1px solid var(--border-color) !important;
+}
+
+.form-control {
+    background-color: #222;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.form-control:focus {
+    background-color: #333;
+    border-color: var(--primary-accent);
+    color: var(--text-color);
+    box-shadow: 0 0 0 0.25rem rgba(57, 255, 20, 0.25); /* Sombra com cor primária */
+}
+
+.form-label {
+    margin-bottom: 0.5rem;
+    color: var(--text-muted-color);
+}
+
+/* Ajustes específicos podem ser adicionados aqui */
+

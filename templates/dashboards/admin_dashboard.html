@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dashboard Administrador - Plataforma Educa{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-4">Dashboard do Administrador</h1>
+    <p class="text-muted">Bem-vindo, {{ user.username }}!</p>
+    <hr class="border-secondary mb-4">
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    Gerenciamento Principal
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="link-light">Gerenciar Escolas</a> <span class="badge bg-secondary">Em breve</span></li>
+                        <li class="mb-2"><a href="#" class="link-light">Gerenciar Usuários Globais</a> <span class="badge bg-secondary">Em breve</span></li>
+                        <li class="mb-2"><a href="/admin/" class="link-light">Acessar Interface Admin Django</a></li>
+                        <li class="mb-2"><a href="#" class="link-light">Visualizar Logs do Sistema</a> <span class="badge bg-secondary">Em breve</span></li>
+                        <li><a href="#" class="link-light">Configurações da Plataforma</a> <span class="badge bg-secondary">Em breve</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    Relatórios e Auditoria
+                </div>
+                <div class="card-body">
+                     <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="link-light">Relatório de Atividade das Escolas</a> <span class="badge bg-secondary">Em breve</span></li>
+                        <li><a href="#" class="link-light">Auditoria de Ações</a> <span class="badge bg-secondary">Em breve</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+

@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dashboard Professor - Plataforma Educa{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-1">Dashboard do Professor</h1>
+    <h2 class="h4 text-muted mb-4">Escola: {{ teacher_profile.school.school_name }}</h2>
+    <p class="text-muted">Bem-vindo(a), {{ user.username }}!</p>
+    <hr class="border-secondary mb-4">
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    Gerenciamento de Turmas e Alunos
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="link-light">Visualizar Minhas Turmas/Grupos</a> <span class="badge bg-secondary">Em breve</span></li>
+                        <li class="mb-2"><a href="#" class="link-light">Criar/Gerenciar Grupos de Alunos</a> <span class="badge bg-secondary">Em breve</span></li>
+                        <li><a href="#" class="link-light">Visualizar Desempenho dos Alunos</a> <span class="badge bg-secondary">Em breve</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header">
+                    Relatórios e Análises
+                </div>
+                 <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="link-light">Relatório de Progresso por Aluno/Turma</a> <span class="badge bg-secondary">Em breve</span></li>
+                        <li><a href="#" class="link-light">Análise de Pontos Críticos (IA)</a> <span class="badge bg-secondary">Em breve</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    Atividades e Avaliações
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="link-light">Criar/Gerenciar Atividades</a> <span class="badge bg-secondary">Em breve</span></li>
+                        <li class="mb-2"><a href="#" class="link-light">Aplicar Atividades para Turmas/Grupos</a> <span class="badge bg-secondary">Em breve</span></li>
+                        <li class="mb-2"><a href="#" class="link-light">Corrigir Atividades Pendentes</a> <span class="badge bg-secondary">Em breve</span></li>
+                        <li><a href="#" class="link-light">Enviar Feedback Individual</a> <span class="badge bg-secondary">Em breve</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
