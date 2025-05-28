@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Plataforma Educacional Django
 
 Este projeto é uma aplicação web desenvolvida com Django que implementa uma plataforma educacional com múltiplos níveis de acesso e dashboards personalizados para cada perfil de usuário.
@@ -174,3 +175,7 @@ Conforme solicitado, foi realizada uma pesquisa inicial sobre a aplicação de M
 *   Refinar a interface do usuário (UI/UX).
 *   Integrar as funcionalidades de Machine Learning planejadas.
 
+=======
+# PROJECT_KREF
+Projeto de finalização de curso.
+>>>>>>> 9cfa3466f33e6dc95e241468d83dc0cc6e88387c
