@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Plataforma Educacional Django
 
 Este projeto é uma aplicação web desenvolvida com Django que implementa uma plataforma educacional com múltiplos níveis de acesso e dashboards personalizados para cada perfil de usuário.
